@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hackathon_app/Screens/animal_profile/animal_profile_screen.dart';
+import 'package:hackathon_app/Screens/hostels/hostel_list.dart';
 import 'package:hackathon_app/theme/colors/colors.dart';
 import 'package:hackathon_app/theme/constants/const.dart';
 import 'package:hackathon_app/widgets/animal_card.dart';
@@ -202,11 +203,14 @@ class HomeScreen extends StatelessWidget {
                 Expanded(
                   child: GridView.builder(
                     itemCount: headings.length,
-                    itemBuilder: (context, index) => AnimalServiceWidget(
-                      details:
-                          'Ex aliquip duis tempor sint est consectetur esse magna occaecat voluptate elit.',
-                      heading: headings[index],
-                      cardColors: accents[index],
+                    itemBuilder: (context, index) => GestureDetector(
+                      onTap: (){Get.to(const HostelList());},
+                      child: AnimalServiceWidget(
+                        details:
+                            'Ex aliquip duis tempor sint est consectetur esse magna occaecat voluptate elit.',
+                        heading: headings[index],
+                        cardColors: accents[index],
+                      ),
                     ),
                     gridDelegate:
                         const SliverGridDelegateWithFixedCrossAxisCount(
