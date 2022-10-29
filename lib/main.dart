@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hackathon_app/Screens/add_pet_screen/pet_register.dart';
 import 'package:hackathon_app/Screens/home/home_screen.dart';
 
 void main() {
@@ -12,7 +13,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: HomeScreen(),
+      home:
+
+          // PetRegisterWidget()
+
+          HomeScreen(),
     );
   }
 }
