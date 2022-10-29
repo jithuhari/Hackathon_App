@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:hackathon_app/screens/login_screen/login_screen.dart';
-import 'package:hackathon_app/screens/onstart/bottom_screen.dart';
-import 'package:hackathon_app/screens/onstart/top_section.dart';
+import 'package:hackathon_app/Screens/login_screen/login_screen.dart';
+import 'package:hackathon_app/Screens/onstart/bottom_screen.dart';
+import 'package:hackathon_app/Screens/onstart/top_section.dart';
+
 import 'package:hackathon_app/theme/color_const.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
