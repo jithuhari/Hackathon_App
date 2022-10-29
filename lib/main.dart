@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hackathon_app/Screens/home/home_screen.dart';
+import 'package:hackathon_app/Screens/onstart/start_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,8 +12,8 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return  GetMaterialApp(
-      home: HomeScreen(),
+    return  const GetMaterialApp(
+      home: ScreenOnStart(),
     );
   }
 }

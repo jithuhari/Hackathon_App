@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:hackathon_app/Screens/login_screen/sign_in.dart';
 
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);
@@ -13,11 +15,7 @@ class Login extends StatelessWidget {
           color: Colors.deepPurple, borderRadius: BorderRadius.circular(5)),
       child: TextButton(
         onPressed: () {
-          Navigator.of(context).push(
-            MaterialPageRoute(
-              builder: (ctx) => Container(),
-            ),
-          );
+          Get.to(const SignInPage());
         },
         child: const Text(
           "Login",
