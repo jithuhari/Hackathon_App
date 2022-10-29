@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hackathon_app/screens/onstart/start_screen.dart';
+import 'package:hackathon_app/Screens/home/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,12 +11,8 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: ScreenOnStart(),
+    return const MaterialApp(
+      home: HomeScreen(),
     );
   }
 }
