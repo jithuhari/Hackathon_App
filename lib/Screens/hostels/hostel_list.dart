@@ -67,7 +67,7 @@ class _HostelListState extends State<HostelList> {
                   children: const [
                     HostelDetail(
                       image: 'assets/21378450.jpg',
-                      name: "Pet Hostel",
+                      name: "Pets Home",
                       address1: "Kakkanad",
                       address2: "Kochi, Kerala",
                       dist: "3",
@@ -78,7 +78,7 @@ class _HostelListState extends State<HostelList> {
                     ),
                     HostelDetail(
                       image: 'assets/dog.jpg',
-                      name: "Pet Care",
+                      name: "Pet Hostel",
                       address1: "Palarivattom",
                       address2: "Kochi, Kerala",
                       dist: "5",
@@ -89,7 +89,7 @@ class _HostelListState extends State<HostelList> {
                     ),
                     HostelDetail(
                       image: 'assets/puppys.jpg',
-                      name: "Pets Home",
+                      name: "Pet Care",
                       address1: "Kalamasssery",
                       address2: "Kochi, Kerala",
                       dist: "6",
