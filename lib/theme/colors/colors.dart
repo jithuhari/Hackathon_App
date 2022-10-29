@@ -8,4 +8,5 @@ import 'package:flutter/material.dart';
 
 const kTextColor = Colors.black;
 const kAppbarColor = Colors.white;
-const kTextLinkColor = Colors.purple;
+const kTextWhiteColor = Colors.white;
+const kTextLinkColor = Colors.deepPurple;
