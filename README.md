@@ -1,6 +1,6 @@
 # hackathon_app
 
-A new Flutter project.
+A new Flutter project for Nintriva Hackathon Ignite 2022
 
 ## Getting Started
 
