@@ -116,10 +116,10 @@ class _SignInPageState extends State<SignInPage> {
                                     passwordText.text == password) {
                                   Get.to(const LoginSplashScreen());
                                 }
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  const SnackBar(
-                                      content: Text('Wrong Credentials')),
-                                );
+                                // ScaffoldMessenger.of(context).showSnackBar(
+                                //   const SnackBar(
+                                //       content: Text('Wrong Credentials')),
+                                // );
                               }
                             },
                             child: const Text(

@@ -132,7 +132,7 @@ class HomeScreen extends StatelessWidget {
                                     child: AnimalCard(
                                       myIcons: Icons.male,
                                       name: items[index].name.toString(),
-                                      ageDetails: '2 y 1 month',
+                                      ageDetails: items[index].age.toString(),
                                       homeWidth: 110,
                                       myAssetImage:
                                           AssetImage(animalsImg[index]),
