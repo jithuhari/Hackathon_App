@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hackathon_app/Screens/home/home_screen.dart';
+import 'package:hackathon_app/Screens/splash_screen/login_splash.dart';
 
 class SignInPage extends StatefulWidget {
   const SignInPage({super.key});
@@ -113,7 +114,7 @@ class _SignInPageState extends State<SignInPage> {
                               if (_formKey.currentState!.validate()) {
                                 if (emailText.text == email &&
                                     passwordText.text == password) {
-                                  Get.to(HomeScreen());
+                                  Get.to(const LoginSplashScreen());
                                 }
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   const SnackBar(
