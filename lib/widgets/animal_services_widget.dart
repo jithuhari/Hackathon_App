@@ -17,7 +17,7 @@ class AnimalServiceWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: kPadding10,
+      padding: const EdgeInsets.all(15),
       child: Container(
         decoration: BoxDecoration(
             color: cardColors,
@@ -26,42 +26,48 @@ class AnimalServiceWidget extends StatelessWidget {
                   color: cardColors, blurRadius: 2, offset: const Offset(1, 1))
             ],
             borderRadius: BorderRadius.circular(8)),
-        width: 125,
-        child: Column(
-          children: [
-            Padding(
-              padding: kPadding10,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    heading,
-                    style: const TextStyle(
-                        color: kTextWhiteColor, fontWeight: FontWeight.w800),
-                  ),
-                ],
+        //width: 110,
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Padding(
+                padding: kPadding10,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Expanded(
+                      child: Text(
+                        heading,
+                        style: const TextStyle(
+                            color: kTextWhiteColor, 
+                            fontSize: 23,
+                            fontWeight: FontWeight.w800),
+                      ),
+                    ),
+                  ],
+                ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
-              child: Text(
-                details,
-                style: const TextStyle(color: kTextWhiteColor),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
+                child: Text(
+                  details,
+                  style: const TextStyle(color: kTextWhiteColor),
+                ),
               ),
-            ),
-            kheight20,
-            Padding(
-              padding: kPadding10,
-              child: Row(
-                children: [
-                  Icon(
-                    Icons.arrow_right_alt_outlined,
-                    color: Colors.purple.shade600,
-                  ),
-                ],
-              ),
-            )
-          ],
+              kheight20,
+              Padding(
+                padding: kPadding10,
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.arrow_right_alt_outlined,
+                      color: Colors.purple.shade600,
+                    ),
+                  ],
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );

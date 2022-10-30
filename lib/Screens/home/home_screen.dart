@@ -5,6 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' as rootBundle;
 import 'package:get/get.dart';
+import 'package:hackathon_app/Screens/add_pet_screen/pet_register.dart';
 import 'package:hackathon_app/Screens/animal_profile/animal_profile_screen.dart';
 import 'package:hackathon_app/Screens/hostels/hostel_list.dart';
 import 'package:hackathon_app/models/petModel.dart';
@@ -29,6 +30,12 @@ class HomeScreen extends StatelessWidget {
     'Adoption',
     'Insurance',
     'Lost tracking (GPS tag)',
+  ];
+
+  List animalsImg = [
+    'assets/dog1.png',
+    'assets/dog2.png',
+    'assets/cat2.png'
   ];
 
   List accents = <Color>[
@@ -89,24 +96,27 @@ class HomeScreen extends StatelessWidget {
                   padding: kPadding20,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
-                      Text(
+                    children: [
+                      const Text(
                         'My Pets',
                         style: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 16),
                       ),
-                      Text(
-                        'Add Pet',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 16,
-                            color: kTextLinkColor),
+                      GestureDetector(
+                        onTap: ()=>Get.to(const PetRegisterWidget()),
+                        child: const Text(
+                          'Add Pet',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 16,
+                              color: kTextLinkColor),
+                        ),
                       ),
                     ],
                   ),
                 ),
                 SizedBox(
-                    height: 165,
+                    height: 185,
                     child: FutureBuilder(
                       future: ReadJsonData(),
                       builder: (context, data) {
@@ -126,7 +136,7 @@ class HomeScreen extends StatelessWidget {
                                       myIcons: Icons.male,
                                       name: items[index].name.toString(),
                                       ageDetails: '2 y 1 month',
-                                      homeWidth: 110,
+                                      homeWidth: 110, myAssetImage: AssetImage(animalsImg[index]),
                                     ),
                                   ),
                               separatorBuilder: (context, index) =>
@@ -230,7 +240,7 @@ class HomeScreen extends StatelessWidget {
                       },
                       child: AnimalServiceWidget(
                         details:
-                            'Ex aliquip duis tempor sint est consectetur esse magna occaecat voluptate elit.',
+                            'Ex aliquip duis tempor sint est .',
                         heading: headings[index],
                         cardColors: accents[index],
                       ),

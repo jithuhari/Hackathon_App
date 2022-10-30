@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:hackathon_app/Screens/hostels/hostel_detail_page.dart';
 
 class HostelDetail extends StatelessWidget {
   final String image;
@@ -77,9 +79,14 @@ class HostelDetail extends StatelessWidget {
                   borderRadius: BorderRadius.circular(50),
                 ),
                 padding: const EdgeInsets.all(5),
-                child: Icon(
-                  Icons.arrow_forward_ios_rounded,
-                  color: Colors.grey[700],
+                child: GestureDetector(
+                  onTap: (){
+                    Get.to(const HostelDetailPage());
+                  },
+                  child: Icon(
+                    Icons.arrow_forward_ios_rounded,
+                    color: Colors.grey[700],
+                  ),
                 ),
               )
             ],

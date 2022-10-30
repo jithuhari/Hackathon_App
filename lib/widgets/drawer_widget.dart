@@ -22,6 +22,7 @@ class DrawerWidget extends StatelessWidget {
             menuItems(text: 'Favorites', icon: Icons.favorite_outline),
             menuItems(text: 'Messages', icon: Icons.message_outlined),
             menuItems(text: 'Profile', icon: Icons.person_outline),
+            menuItems(text: 'History', icon: Icons.book),
             menuItems(text: 'Logout', icon: Icons.logout),
           ],
         ),

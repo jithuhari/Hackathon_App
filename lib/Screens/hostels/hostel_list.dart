@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hackathon_app/Screens/hostels/hostel_detail.dart';
 
 class HostelList extends StatefulWidget {
@@ -14,9 +15,12 @@ class _HostelListState extends State<HostelList> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        leading: const Icon(
-          Icons.arrow_back_ios_new,
-          color: Colors.black,
+        leading: GestureDetector(
+          onTap: () =>Get.back() ,
+          child: const Icon(
+            Icons.arrow_back_ios_new,
+            color: Colors.black,
+          ),
         ),
         actions: const [
           Icon(Icons.more_horiz),

@@ -7,13 +7,14 @@ class AnimalCard extends StatelessWidget {
     required this.name,
     required this.myIcons,
     required this.ageDetails,
-    required this.homeWidth,
+    required this.homeWidth, required this.myAssetImage,
   }) : super(key: key);
 
   final String name;
   final IconData myIcons;
   final String ageDetails;
   final double homeWidth;
+  final AssetImage myAssetImage;
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +33,7 @@ class AnimalCard extends StatelessWidget {
         width: homeWidth,
         child: Column(
           children: [
-            const Image(height: 80, image: AssetImage('assets/cat1.png')),
+             Image(height: 100, image: myAssetImage),
             Padding(
               padding: const EdgeInsets.fromLTRB(10, 0, 10, 10),
               child: Row(

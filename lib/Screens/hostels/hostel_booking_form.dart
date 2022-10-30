@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class HostelBookingForm extends StatefulWidget {
   const HostelBookingForm({super.key});
@@ -13,9 +14,12 @@ class _HostelBookingFormState extends State<HostelBookingForm> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        leading: const Icon(
-          Icons.arrow_back_ios_new,
-          color: Colors.black,
+        leading: GestureDetector(
+          onTap: () =>Get.back() ,
+          child: const Icon(
+            Icons.arrow_back_ios_new,
+            color: Colors.black,
+          ),
         ),
         actions: const [
           Icon(Icons.more_horiz),
