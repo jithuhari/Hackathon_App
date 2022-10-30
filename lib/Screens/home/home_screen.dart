@@ -1,9 +1,13 @@
+import 'dart:convert';
+
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart' as rootBundle;
 import 'package:get/get.dart';
 import 'package:hackathon_app/Screens/animal_profile/animal_profile_screen.dart';
 import 'package:hackathon_app/Screens/hostels/hostel_list.dart';
+import 'package:hackathon_app/model/addpet_model.dart';
 import 'package:hackathon_app/theme/colors/colors.dart';
 import 'package:hackathon_app/theme/constants/const.dart';
 import 'package:hackathon_app/widgets/animal_card.dart';
@@ -102,24 +106,41 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 165,
-                  child: ListView.separated(
-                      scrollDirection: Axis.horizontal,
-                      itemBuilder: (context, intex) => GestureDetector(
-                        onTap: (){
-                          Get.to(const AnimalProfileScreen());
-                        },
-                        child: const AnimalCard(
-                              myIcons: Icons.male,
-                              name: 'Titou',
-                              ageDetails: '2 y 1 month', homeWidth: 110,
-                            ),
-                      ),
-                      separatorBuilder: (context, index) => const SizedBox(
-                            width: 0,
-                          ),
-                      itemCount: 4),
-                ),
+                    height: 165,
+                    child: FutureBuilder(
+                      future: ReadJsonData(),
+                      builder: (context, data) {
+                        if (data.hasError) {
+                          return Center(
+                            child: Text("${data.error}"),
+                          );
+                        } else if (data.hasData) {
+                          var items = data.data as List<dynamic>;
+                          return ListView.separated(
+                              scrollDirection: Axis.horizontal,
+                              itemBuilder: (context, index) => GestureDetector(
+                                    onTap: () {
+                                      Get.to(const AnimalProfileScreen());
+                                    },
+                                    child: AnimalCard(
+                                      myIcons: Icons.male,
+                                      name: items[index].name.toString(),
+                                      ageDetails: '2 y 1 month',
+                                      homeWidth: 110,
+                                    ),
+                                  ),
+                              separatorBuilder: (context, index) =>
+                                  const SizedBox(
+                                    width: 0,
+                                  ),
+                              itemCount: items.length);
+                        } else {
+                          return const Center(
+                            child: CircularProgressIndicator(),
+                          );
+                        }
+                      },
+                    )),
                 kheight,
                 //Carousel Slider
 
@@ -204,7 +225,9 @@ class HomeScreen extends StatelessWidget {
                   child: GridView.builder(
                     itemCount: headings.length,
                     itemBuilder: (context, index) => GestureDetector(
-                      onTap: (){Get.to(const HostelList());},
+                      onTap: () {
+                        Get.to(const HostelList());
+                      },
                       child: AnimalServiceWidget(
                         details:
                             'Ex aliquip duis tempor sint est consectetur esse magna occaecat voluptate elit.',
@@ -226,4 +249,12 @@ class HomeScreen extends StatelessWidget {
       ),
     );
   }
+}
+
+Future<List<Pet>> ReadJsonData() async {
+  final jsondata =
+      await rootBundle.rootBundle.loadString('assets/json/data.json');
+  final list = json.decode(jsondata) as List<dynamic>;
+
+  return list.map((e) => Pet.fromJson(e)).toList();
 }
