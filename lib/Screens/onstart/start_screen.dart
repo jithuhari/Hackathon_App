@@ -41,7 +41,7 @@ class ScreenOnStartState extends State<ScreenOnStart> {
             SmoothPageIndicator(
               controller: _pageController,
               count: 3,
-              effect: SwapEffect(
+              effect: const SwapEffect(
                   activeDotColor: mainColor, dotHeight: 6, dotWidth: 6),
             ),
             const Login(),
@@ -65,11 +65,11 @@ class CommonSCreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           const TopSection(),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           SizedBox(height: 350, child: Image.asset(imageAssets)),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           BottomSection(title: title)

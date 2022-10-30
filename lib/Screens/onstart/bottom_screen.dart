@@ -8,25 +8,33 @@ class BottomSection extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
-        Text(
-          title,
-          style: const TextStyle(
-            letterSpacing: 2,
-            fontSize: 28,
-            fontWeight: FontWeight.bold,
+        Padding(
+          padding: const EdgeInsets.fromLTRB(15, 15, 15, 0),
+          child: Text(
+            title,
+            textAlign: TextAlign.center,
+            style: const TextStyle(
+              letterSpacing: 2,
+              fontSize: 28,
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
         const SizedBox(
           height: 20,
         ),
         Row(
-          children: [
+          children: const [
             Expanded(
-              child: const Text(
-                " individual monitoring around the world animalsplanet...",
-                style: TextStyle(
-                  fontSize: 16,
-                  color: Colors.grey,
+              child: Padding(
+                padding: EdgeInsets.all(15.0),
+                child: Text(
+                  "Get the best matching pet for you and get all the services related to your pet under one application",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Colors.grey,
+                  ),
                 ),
               ),
             ),
