@@ -7,11 +7,13 @@ class AnimalCard extends StatelessWidget {
     required this.name,
     required this.myIcons,
     required this.ageDetails,
+    required this.homeWidth,
   }) : super(key: key);
 
   final String name;
   final IconData myIcons;
   final String ageDetails;
+  final double homeWidth;
 
   @override
   Widget build(BuildContext context) {
@@ -27,25 +29,34 @@ class AnimalCard extends StatelessWidget {
                   offset: const Offset(1, 1))
             ],
             borderRadius: BorderRadius.circular(8)),
-        width: 125,
+        width: homeWidth,
         child: Column(
           children: [
+            const Image(height: 80, image: AssetImage('assets/cat1.png')),
             Padding(
-              padding: kPadding10,
+              padding: const EdgeInsets.fromLTRB(10, 0, 10, 10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [Text(name), Icon(myIcons)],
+                children: [
+                  Text(
+                    name,
+                    style: const TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                  Icon(myIcons)
+                ],
               ),
             ),
             Padding(
               padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
               child: Row(
                 children: [
-                  Text(ageDetails),
+                  Text(
+                    ageDetails,
+                    style: const TextStyle(color: Colors.grey, fontSize: 12),
+                  ),
                 ],
               ),
             ),
-            const Image(height: 120, image: AssetImage('assets/cat1.png'))
           ],
         ),
       ),

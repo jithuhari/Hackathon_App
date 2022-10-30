@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hackathon_app/theme/colors/colors.dart';
 import 'package:hackathon_app/theme/constants/const.dart';
 
 class AnimalServiceWidget extends StatelessWidget {
@@ -6,10 +7,12 @@ class AnimalServiceWidget extends StatelessWidget {
     Key? key,
     required this.heading,
     required this.details,
+    required this.cardColors,
   }) : super(key: key);
 
   final String heading;
   final String details;
+  final Color cardColors;
 
   @override
   Widget build(BuildContext context) {
@@ -17,12 +20,10 @@ class AnimalServiceWidget extends StatelessWidget {
       padding: kPadding10,
       child: Container(
         decoration: BoxDecoration(
-            color: Colors.grey.shade200,
+            color: cardColors,
             boxShadow: [
               BoxShadow(
-                  color: Colors.grey.withOpacity(0.6),
-                  blurRadius: 2,
-                  offset: const Offset(1, 1))
+                  color: cardColors, blurRadius: 2, offset: const Offset(1, 1))
             ],
             borderRadius: BorderRadius.circular(8)),
         width: 125,
@@ -32,15 +33,34 @@ class AnimalServiceWidget extends StatelessWidget {
               padding: kPadding10,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [Text(heading),],
+                children: [
+                  Text(
+                    heading,
+                    style: const TextStyle(
+                        color: kTextWhiteColor, fontWeight: FontWeight.w800),
+                  ),
+                ],
               ),
             ),
             Padding(
               padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
               child: Text(
                 details,
-                ),
+                style: const TextStyle(color: kTextWhiteColor),
+              ),
             ),
+            kheight20,
+            Padding(
+              padding: kPadding10,
+              child: Row(
+                children: [
+                  Icon(
+                    Icons.arrow_right_alt_outlined,
+                    color: Colors.purple.shade600,
+                  ),
+                ],
+              ),
+            )
           ],
         ),
       ),
