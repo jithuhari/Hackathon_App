@@ -3,6 +3,7 @@ import 'dart:ffi';
 import 'package:date_field/date_field.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hackathon_app/Screens/hostels/hostel_booking_confirm.dart';
 import 'package:hackathon_app/theme/constants/const.dart';
 
 class HostelBookingForm extends StatefulWidget {
@@ -207,7 +208,7 @@ class _HostelBookingFormState extends State<HostelBookingForm> {
                       borderRadius: BorderRadius.circular(5)),
                   width: double.infinity,
                   child: TextButton(
-                      onPressed: () => "success",
+                      onPressed: () => Get.to(const HostelBookingConfirm()),
                       child: const Padding(
                         padding: EdgeInsets.fromLTRB(12, 8, 12, 8),
                         child: Text(

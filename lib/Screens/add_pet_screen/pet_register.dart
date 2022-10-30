@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:hackathon_app/Screens/add_pet_screen/widgets/category_widgets.dart';
 
 import 'package:hackathon_app/Screens/add_pet_screen/widgets/gender_widgets.dart';
+import 'package:hackathon_app/Screens/home/home2_screen.dart';
 import 'package:hackathon_app/theme/colors/colors.dart';
 import 'package:hackathon_app/theme/constants/const.dart';
 
@@ -97,7 +98,7 @@ class _PetRegisterWidgetState extends State<PetRegisterWidget> {
                           onPressed: () {
                             Navigator.of(context).push(
                               MaterialPageRoute(
-                                builder: (ctx) => Container(),
+                                builder: (ctx) => HomeScreen2(),
                               ),
                             );
                           },

@@ -15,8 +15,8 @@ import 'package:hackathon_app/widgets/animal_card.dart';
 import 'package:hackathon_app/widgets/animal_services_widget.dart';
 import 'package:hackathon_app/widgets/drawer_widget.dart';
 
-class HomeScreen extends StatelessWidget {
-  HomeScreen({Key? key}) : super(key: key);
+class HomeScreen2 extends StatelessWidget {
+  HomeScreen2({Key? key}) : super(key: key);
 
   List headings = [
     'Hostel Services',
@@ -143,7 +143,7 @@ class HomeScreen extends StatelessWidget {
                                   const SizedBox(
                                     width: 0,
                                   ),
-                              itemCount: 2);
+                              itemCount: items.length);
                         } else {
                           return const Center(
                             child: CircularProgressIndicator(),

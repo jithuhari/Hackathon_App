@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:hackathon_app/Screens/home/home2_screen.dart';
 
 class HostelBookingConfirm extends StatefulWidget {
   const HostelBookingConfirm({super.key});
@@ -90,7 +92,7 @@ class _HostelBookingConfirmState extends State<HostelBookingConfirm> {
                         borderRadius: BorderRadius.circular(5)),
                     width: double.infinity,
                     child: TextButton(
-                        onPressed: () => "success",
+                        onPressed: () => Get.to(HomeScreen2()),
                         child: const Padding(
                           padding: const EdgeInsets.fromLTRB(12, 8, 12, 8),
                           child: Text(
