@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hackathon_app/Screens/home/home2_screen.dart';
+import 'package:lottie/lottie.dart';
 
 class HostelBookingConfirm extends StatefulWidget {
   const HostelBookingConfirm({super.key});
@@ -41,16 +42,9 @@ class _HostelBookingConfirmState extends State<HostelBookingConfirm> {
                       children: [
                         ClipRRect(
                             borderRadius: BorderRadius.circular(120),
-                            child: Container(
-                              decoration:
-                                  BoxDecoration(color: Colors.greenAccent[700]),
-                              padding: const EdgeInsets.all(40),
-                              child: const Icon(
-                                Icons.check_rounded,
-                                color: Colors.white,
-                                size: 150,
-                              ),
-                            )),
+                            child: SizedBox(
+                              height: 200,
+                              child: Lottie.asset('assets/json/success.json'))),
                       ],
                     ),
                   ),

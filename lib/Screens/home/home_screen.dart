@@ -14,7 +14,8 @@ import 'package:hackathon_app/theme/constants/const.dart';
 import 'package:hackathon_app/widgets/animal_card.dart';
 import 'package:hackathon_app/widgets/animal_services_widget.dart';
 import 'package:hackathon_app/widgets/drawer_widget.dart';
-
+import 'package:iconify_flutter/iconify_flutter.dart';
+import 'package:iconify_flutter/icons/bx.dart';
 class HomeScreen extends StatelessWidget {
   HomeScreen({Key? key}) : super(key: key);
 

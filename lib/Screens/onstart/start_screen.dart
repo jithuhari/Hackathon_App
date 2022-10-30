@@ -25,13 +25,13 @@ class ScreenOnStartState extends State<ScreenOnStart> {
             controller: _pageController,
             children: const [
               CommonSCreen(
-                  title: "Adopt a friend", imageAssets: "assets/puppys.jpg"),
+                  title: "Adopt a friend", imageAssets: "assets/intro1.png"),
               CommonSCreen(
                   title: "Quality care with style",
-                  imageAssets: "assets/puppys.jpg"),
+                  imageAssets: "assets/intro3.png"),
               CommonSCreen(
                   title: "It's your pet's time to shine",
-                  imageAssets: "assets/puppys.jpg"),
+                  imageAssets: "assets/intro2.png"),
             ],
           ),
         ),
@@ -68,7 +68,7 @@ class CommonSCreen extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
-          SizedBox(height: 350, child: Image.asset(imageAssets)),
+          SizedBox(height: MediaQuery.of(context).size.height/3, child: Image.asset(imageAssets)),
           const SizedBox(
             height: 10,
           ),
