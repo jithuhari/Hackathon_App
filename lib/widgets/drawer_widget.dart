@@ -3,8 +3,8 @@ import 'package:hackathon_app/theme/colors/colors.dart';
 import 'package:hackathon_app/theme/constants/const.dart';
 
 class DrawerWidget extends StatelessWidget {
-  final name = 'Sree';
-  final email = 'sree@gmail.com';
+  final name = 'user';
+  final email = 'user@gmail.com';
 
   const DrawerWidget({Key? key}) : super(key: key);
 

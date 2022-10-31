@@ -38,7 +38,7 @@ class _SignInPageState extends State<SignInPage> {
                         decoration: const BoxDecoration(
                             // color: Colors.deepPurple,
                             ),
-                        padding: const EdgeInsets.all(50),
+                        padding: const EdgeInsets.only(right: 27, left: 30),
                         // child: const Text("IMG")
                         child: Image.asset(
                           "assets/logo.png",

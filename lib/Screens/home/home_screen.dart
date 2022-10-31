@@ -16,6 +16,7 @@ import 'package:hackathon_app/widgets/animal_services_widget.dart';
 import 'package:hackathon_app/widgets/drawer_widget.dart';
 import 'package:iconify_flutter/iconify_flutter.dart';
 import 'package:iconify_flutter/icons/bx.dart';
+
 class HomeScreen extends StatelessWidget {
   HomeScreen({Key? key}) : super(key: key);
 
@@ -166,7 +167,7 @@ class HomeScreen extends StatelessWidget {
                                   color: Colors.deepPurple.shade500,
                                   borderRadius: BorderRadius.circular(10)),
                               child: Padding(
-                                padding: kPadding10,
+                                padding: EdgeInsets.only(left: 10, right: 10),
                                 child: Column(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceAround,
@@ -219,7 +220,7 @@ class HomeScreen extends StatelessWidget {
                                             Icon(
                                               Icons.percent,
                                               color: Colors.white,
-                                              size: 45,
+                                              size: 25,
                                             ),
                                           ],
                                         ),
@@ -235,7 +236,7 @@ class HomeScreen extends StatelessWidget {
                                                       color: Colors.white,
                                                       fontWeight:
                                                           FontWeight.bold,
-                                                      fontSize: 20),
+                                                      fontSize: 18),
                                                 )
                                               ],
                                             ),
@@ -284,7 +285,7 @@ class HomeScreen extends StatelessWidget {
                                               style: TextStyle(
                                                   color: Colors.white,
                                                   fontWeight: FontWeight.bold,
-                                                  fontSize: 20),
+                                                  fontSize: 16),
                                             ),
                                             Text(
                                               "60",
@@ -296,7 +297,7 @@ class HomeScreen extends StatelessWidget {
                                             Icon(
                                               Icons.percent,
                                               color: Colors.white,
-                                              size: 45,
+                                              size: 25,
                                             ),
                                           ],
                                         ),
@@ -365,6 +366,9 @@ class HomeScreen extends StatelessWidget {
                                             ),
                                           ],
                                         ),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
                                         Column(
                                           children: [
                                             Row(
@@ -377,7 +381,7 @@ class HomeScreen extends StatelessWidget {
                                                       color: Colors.white,
                                                       fontWeight:
                                                           FontWeight.bold,
-                                                      fontSize: 20),
+                                                      fontSize: 18),
                                                 )
                                               ],
                                             ),

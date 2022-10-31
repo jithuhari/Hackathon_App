@@ -165,43 +165,11 @@ class HomeScreen2 extends StatelessWidget {
                                   color: Colors.deepPurple.shade500,
                                   borderRadius: BorderRadius.circular(10)),
                               child: Padding(
-                                padding: kPadding10,
+                                padding: EdgeInsets.only(left: 10, right: 10),
                                 child: Column(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceAround,
                                   children: [
-                                    // Row(
-                                    //   crossAxisAlignment:
-                                    //       CrossAxisAlignment.start,
-                                    //   children: const [
-                                    //     Icon(Icons.medical_services_outlined,
-                                    //         size: 16, color: Colors.white),
-                                    //     kWidth,
-                                    //     Text(
-                                    //       'Health Check',
-                                    //       style: TextStyle(
-                                    //           fontSize: 14.0,
-                                    //           color: Colors.white,
-                                    //           fontWeight: FontWeight.bold),
-                                    //     ),
-                                    //   ],
-                                    // ),
-                                    // Row(
-                                    //   crossAxisAlignment:
-                                    //       CrossAxisAlignment.start,
-                                    //   children: const [
-                                    //     Icon(CupertinoIcons.clock,
-                                    //         size: 14, color: Colors.white),
-                                    //     kWidth,
-                                    //     Text(
-                                    //       '09.00 AM . 14 Dec , 2022',
-                                    //       style: TextStyle(
-                                    //         fontSize: 12.0,
-                                    //         color: Colors.white,
-                                    //       ),
-                                    //     ),
-                                    //   ],
-                                    // ),
                                     Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceAround,
@@ -218,7 +186,7 @@ class HomeScreen2 extends StatelessWidget {
                                             Icon(
                                               Icons.percent,
                                               color: Colors.white,
-                                              size: 45,
+                                              size: 25,
                                             ),
                                           ],
                                         ),
@@ -234,7 +202,7 @@ class HomeScreen2 extends StatelessWidget {
                                                       color: Colors.white,
                                                       fontWeight:
                                                           FontWeight.bold,
-                                                      fontSize: 20),
+                                                      fontSize: 18),
                                                 )
                                               ],
                                             ),
@@ -283,7 +251,7 @@ class HomeScreen2 extends StatelessWidget {
                                               style: TextStyle(
                                                   color: Colors.white,
                                                   fontWeight: FontWeight.bold,
-                                                  fontSize: 20),
+                                                  fontSize: 18),
                                             ),
                                             Text(
                                               "60",
@@ -295,7 +263,7 @@ class HomeScreen2 extends StatelessWidget {
                                             Icon(
                                               Icons.percent,
                                               color: Colors.white,
-                                              size: 45,
+                                              size: 25,
                                             ),
                                           ],
                                         ),
@@ -311,7 +279,7 @@ class HomeScreen2 extends StatelessWidget {
                                                       color: Colors.white,
                                                       fontWeight:
                                                           FontWeight.bold,
-                                                      fontSize: 20),
+                                                      fontSize: 18),
                                                 )
                                               ],
                                             ),
@@ -364,6 +332,9 @@ class HomeScreen2 extends StatelessWidget {
                                             ),
                                           ],
                                         ),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
                                         Column(
                                           children: [
                                             Row(
@@ -376,7 +347,7 @@ class HomeScreen2 extends StatelessWidget {
                                                       color: Colors.white,
                                                       fontWeight:
                                                           FontWeight.bold,
-                                                      fontSize: 20),
+                                                      fontSize: 18),
                                                 )
                                               ],
                                             ),
