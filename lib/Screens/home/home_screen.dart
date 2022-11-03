@@ -154,257 +154,211 @@ class HomeScreen extends StatelessWidget {
                 kheight,
                 //Carousel Slider
 
-                CarouselSlider(options: CarouselOptions(height: 65.0),
-                    // items: ['Health Checkup', 'Champions', 3].map((i) {
-                    items: [
-                      Builder(
-                        builder: (BuildContext context) {
-                          return Container(
-                              width: MediaQuery.of(context).size.width,
-                              margin:
-                                  const EdgeInsets.symmetric(horizontal: 5.0),
-                              decoration: BoxDecoration(
-                                  color: Colors.deepPurple.shade500,
-                                  borderRadius: BorderRadius.circular(10)),
-                              child: Padding(
-                                padding: EdgeInsets.only(left: 10, right: 10),
-                                child: Column(
+                CarouselSlider(options: CarouselOptions(height: 65.0), items: [
+                  Builder(
+                    builder: (BuildContext context) {
+                      return Container(
+                          width: MediaQuery.of(context).size.width,
+                          margin: const EdgeInsets.symmetric(horizontal: 5.0),
+                          decoration: BoxDecoration(
+                              color: Colors.deepPurple.shade500,
+                              borderRadius: BorderRadius.circular(10)),
+                          child: Padding(
+                            padding: EdgeInsets.only(left: 10, right: 10),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceAround,
                                   children: [
-                                    // Row(
-                                    //   crossAxisAlignment:
-                                    //       CrossAxisAlignment.start,
-                                    //   children: const [
-                                    //     Icon(Icons.medical_services_outlined,
-                                    //         size: 16, color: Colors.white),
-                                    //     kWidth,
-                                    //     Text(
-                                    //       'Health Check',
-                                    //       style: TextStyle(
-                                    //           fontSize: 14.0,
-                                    //           color: Colors.white,
-                                    //           fontWeight: FontWeight.bold),
-                                    //     ),
-                                    //   ],
-                                    // ),
-                                    // Row(
-                                    //   crossAxisAlignment:
-                                    //       CrossAxisAlignment.start,
-                                    //   children: const [
-                                    //     Icon(CupertinoIcons.clock,
-                                    //         size: 14, color: Colors.white),
-                                    //     kWidth,
-                                    //     Text(
-                                    //       '09.00 AM . 14 Dec , 2022',
-                                    //       style: TextStyle(
-                                    //         fontSize: 12.0,
-                                    //         color: Colors.white,
-                                    //       ),
-                                    //     ),
-                                    //   ],
-                                    // ),
                                     Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceAround,
-                                      children: [
-                                        Row(
-                                          children: const [
-                                            Text(
-                                              "20",
-                                              style: TextStyle(
-                                                  color: Colors.white,
-                                                  fontWeight: FontWeight.bold,
-                                                  fontSize: 38),
-                                            ),
-                                            Icon(
-                                              Icons.percent,
+                                      children: const [
+                                        Text(
+                                          "20",
+                                          style: TextStyle(
                                               color: Colors.white,
-                                              size: 25,
-                                            ),
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 38),
+                                        ),
+                                        Icon(
+                                          Icons.percent,
+                                          color: Colors.white,
+                                          size: 25,
+                                        ),
+                                      ],
+                                    ),
+                                    Column(
+                                      children: [
+                                        Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.start,
+                                          children: const [
+                                            Text(
+                                              "OFF On Pet Insurance",
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 18),
+                                            )
                                           ],
                                         ),
-                                        Column(
-                                          children: [
-                                            Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.start,
-                                              children: const [
-                                                Text(
-                                                  "OFF On Pet Insurance",
-                                                  style: TextStyle(
-                                                      color: Colors.white,
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                      fontSize: 18),
-                                                )
-                                              ],
-                                            ),
-                                            Row(
-                                              children: const [
-                                                Text("Get a quote now",
-                                                    style: TextStyle(
-                                                        color: Colors.white,
-                                                        fontWeight:
-                                                            FontWeight.bold,
-                                                        fontSize: 14))
-                                              ],
-                                            )
+                                        Row(
+                                          children: const [
+                                            Text("Get a quote now",
+                                                style: TextStyle(
+                                                    color: Colors.white,
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 14))
                                           ],
                                         )
                                       ],
                                     )
                                   ],
-                                ),
-                              ));
-                        },
-                      ),
-                      Builder(
-                        builder: (BuildContext context) {
-                          return Container(
-                              width: MediaQuery.of(context).size.width,
-                              margin:
-                                  const EdgeInsets.symmetric(horizontal: 5.0),
-                              decoration: BoxDecoration(
-                                  color: Color.fromARGB(255, 228, 63, 58),
-                                  borderRadius: BorderRadius.circular(10)),
-                              child: Padding(
-                                padding: kPadding10,
-                                child: Column(
+                                )
+                              ],
+                            ),
+                          ));
+                    },
+                  ),
+                  Builder(
+                    builder: (BuildContext context) {
+                      return Container(
+                          width: MediaQuery.of(context).size.width,
+                          margin: const EdgeInsets.symmetric(horizontal: 5.0),
+                          decoration: BoxDecoration(
+                              color: Color.fromARGB(255, 228, 63, 58),
+                              borderRadius: BorderRadius.circular(10)),
+                          child: Padding(
+                            padding: kPadding10,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceAround,
                                   children: [
                                     Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceAround,
-                                      children: [
-                                        Row(
-                                          children: const [
-                                            Text(
-                                              "Upto ",
-                                              style: TextStyle(
-                                                  color: Colors.white,
-                                                  fontWeight: FontWeight.bold,
-                                                  fontSize: 16),
-                                            ),
-                                            Text(
-                                              "60",
-                                              style: TextStyle(
-                                                  color: Colors.white,
-                                                  fontWeight: FontWeight.bold,
-                                                  fontSize: 38),
-                                            ),
-                                            Icon(
-                                              Icons.percent,
+                                      children: const [
+                                        Text(
+                                          "Upto ",
+                                          style: TextStyle(
                                               color: Colors.white,
-                                              size: 25,
-                                            ),
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 16),
+                                        ),
+                                        Text(
+                                          "60",
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 35),
+                                        ),
+                                        Icon(
+                                          Icons.percent,
+                                          color: Colors.white,
+                                          size: 25,
+                                        ),
+                                      ],
+                                    ),
+                                    Column(
+                                      children: [
+                                        Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.start,
+                                          children: const [
+                                            Text(
+                                              "OFF on Pet Toys",
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 18),
+                                            )
                                           ],
                                         ),
-                                        Column(
-                                          children: [
-                                            Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.start,
-                                              children: const [
-                                                Text(
-                                                  "OFF on Pet Toys",
-                                                  style: TextStyle(
-                                                      color: Colors.white,
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                      fontSize: 20),
-                                                )
-                                              ],
-                                            ),
-                                            Row(
-                                              children: const [
-                                                Text("Hurry Up",
-                                                    style: TextStyle(
-                                                        color: Colors.white,
-                                                        fontWeight:
-                                                            FontWeight.bold,
-                                                        fontSize: 14))
-                                              ],
-                                            )
+                                        Row(
+                                          children: const [
+                                            Text("Hurry Up",
+                                                style: TextStyle(
+                                                    color: Colors.white,
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 12))
                                           ],
                                         )
                                       ],
                                     )
                                   ],
-                                ),
-                              ));
-                        },
-                      ),
-                      Builder(
-                        builder: (BuildContext context) {
-                          return Container(
-                              width: MediaQuery.of(context).size.width,
-                              margin:
-                                  const EdgeInsets.symmetric(horizontal: 5.0),
-                              decoration: BoxDecoration(
-                                  color: Color.fromARGB(255, 15, 165, 60),
-                                  borderRadius: BorderRadius.circular(10)),
-                              child: Padding(
-                                padding: kPadding10,
-                                child: Column(
+                                )
+                              ],
+                            ),
+                          ));
+                    },
+                  ),
+                  Builder(
+                    builder: (BuildContext context) {
+                      return Container(
+                          width: MediaQuery.of(context).size.width,
+                          margin: const EdgeInsets.symmetric(horizontal: 5.0),
+                          decoration: BoxDecoration(
+                              color: Color.fromARGB(255, 15, 165, 60),
+                              borderRadius: BorderRadius.circular(10)),
+                          child: Padding(
+                            padding: kPadding10,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceAround,
                                   children: [
                                     Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceAround,
+                                      children: const [
+                                        Text(
+                                          "Free",
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 35),
+                                        ),
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      width: 10,
+                                    ),
+                                    Column(
                                       children: [
                                         Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.start,
                                           children: const [
                                             Text(
-                                              "Free",
+                                              "Pet Health Checkup",
                                               style: TextStyle(
                                                   color: Colors.white,
                                                   fontWeight: FontWeight.bold,
-                                                  fontSize: 38),
-                                            ),
+                                                  fontSize: 18),
+                                            )
                                           ],
                                         ),
-                                        SizedBox(
-                                          width: 10,
-                                        ),
-                                        Column(
-                                          children: [
-                                            Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.start,
-                                              children: const [
-                                                Text(
-                                                  "Pet Health Checkup",
-                                                  style: TextStyle(
-                                                      color: Colors.white,
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                      fontSize: 18),
-                                                )
-                                              ],
-                                            ),
-                                            Row(
-                                              children: const [
-                                                Text("on Vet consultation",
-                                                    style: TextStyle(
-                                                        color: Colors.white,
-                                                        fontWeight:
-                                                            FontWeight.bold,
-                                                        fontSize: 14))
-                                              ],
-                                            )
+                                        Row(
+                                          children: const [
+                                            Text("on Vet consultation",
+                                                style: TextStyle(
+                                                    color: Colors.white,
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 14))
                                           ],
                                         )
                                       ],
                                     )
                                   ],
-                                ),
-                              ));
-                        },
-                      ),
-                    ]),
+                                )
+                              ],
+                            ),
+                          ));
+                    },
+                  ),
+                ]),
 
                 Padding(
                   padding: kPadding20,

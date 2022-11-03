@@ -16,7 +16,7 @@ class _HostelDetailPageState extends State<HostelDetailPage> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         leading: GestureDetector(
-          onTap: () =>Get.back() ,
+          onTap: () => Get.back(),
           child: const Icon(
             Icons.arrow_back_ios_new,
             color: Colors.black,
@@ -73,18 +73,19 @@ class _HostelDetailPageState extends State<HostelDetailPage> {
                           ],
                         ),
                         Row(
-                          children: const [
-                            Icon(
+                          children: [
+                            const Icon(
                               Icons.map_outlined,
                               color: Colors.grey,
                               size: 18,
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 5,
                             ),
-                            Text(
-                              "Kakkanad, Kochi (view in map)",
-                              style: TextStyle(color: Colors.grey),
+                            TextButton(
+                              child: const Text("Kakkanad, Kochi (view in map",
+                                  style: TextStyle(color: Colors.grey)),
+                              onPressed: () {},
                             )
                           ],
                         ),
@@ -299,7 +300,7 @@ class _HostelDetailPageState extends State<HostelDetailPage> {
                       borderRadius: BorderRadius.circular(5)),
                   width: double.infinity,
                   child: TextButton(
-                      onPressed: () =>Get.to(const HostelBookingForm()),
+                      onPressed: () => Get.to(const HostelBookingForm()),
                       child: Padding(
                         padding: const EdgeInsets.fromLTRB(12, 8, 12, 8),
                         child: Row(
